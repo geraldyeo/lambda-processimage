@@ -1,7 +1,7 @@
 {
   "name": "processimage",
   "version": "1.0.0",
-  "main": "index",
+  "main": "index.js",
   "lambda": {
     "role": "semaphore-deploy-role"
   },
@@ -22,8 +22,7 @@
   },
   "dependencies": {
     "@smallwins/lambda": "4.0.0",
-    "@smallwins/validate": "3.0.0",
-    "dotenv": "^2.0.0"
+    "@smallwins/validate": "3.0.0"
   },
   "devDependencies": {
     "ava": "0.14.0",
