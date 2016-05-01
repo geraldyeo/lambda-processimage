@@ -1,0 +1,31 @@
+{
+  "name": "processimage",
+  "version": "1.0.0",
+  "main": "index",
+  "lambda": {
+    "role": "semaphore-deploy-role"
+  },
+  "scripts": {
+    "test": "nyc ava | faucet",
+    "posttest": "nyc report"
+  },
+  "ava": {
+    "files": [
+      "test.js"
+    ],
+    "source": [
+      "index.js"
+    ],
+    "failFast": true,
+    "tap": true
+  },
+  "dependencies": {
+    "@smallwins/lambda": "4.0.0",
+    "@smallwins/validate": "3.0.0"
+  },
+  "devDependencies": {
+    "ava": "0.14.0",
+    "faucet": "0.0.1",
+    "nyc": "6.4.0"
+  }
+}

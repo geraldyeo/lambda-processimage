@@ -1,0 +1,35 @@
+{
+  "name": "lambda-processimage",
+  "version": "0.0.0",
+  "description": "An image processor deployed on AWS Lambda, served via API Gateway, that processes images in S3 bucket.",
+  "main": "index.js",
+  "scripts": {
+    "create":"AWS_PROFILE=gerald lambda-create",
+    "list":"AWS_PROFILE=gerald lambda-list",
+    "deploy":"AWS_PROFILE=gerald lambda-deploy",
+    "invoke":"AWS_PROFILE=gerald lambda-invoke",
+    "local":"AWS_PROFILE=gerald lambda-local",
+    "deps":"AWS_PROFILE=gerald lambda-deps",
+    "log":"AWS_PROFILE=gerald lambda-log"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geraldyeo/lambda-processimage.git"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "api",
+    "gateway",
+    "s3"
+  ],
+  "author": "Gerald Yeo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/geraldyeo/lambda-processimage/issues"
+  },
+  "homepage": "https://github.com/geraldyeo/lambda-processimage#readme",
+  "dependencies": {
+    "@smallwins/lambda": "^4.21.0"
+  }
+}
