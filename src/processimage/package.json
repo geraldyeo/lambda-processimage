@@ -6,8 +6,9 @@
     "role": "semaphore-deploy-role"
   },
   "scripts": {
+    "report": "nyc report --reporter=text-lcov > coverage.lcov",
     "test": "nyc ava | faucet",
-    "posttest": "nyc report"
+    "posttest": "npm run report && codecov"
   },
   "ava": {
     "files": [
@@ -21,10 +22,12 @@
   },
   "dependencies": {
     "@smallwins/lambda": "4.0.0",
-    "@smallwins/validate": "3.0.0"
+    "@smallwins/validate": "3.0.0",
+    "dotenv": "^2.0.0"
   },
   "devDependencies": {
     "ava": "0.14.0",
+    "codecov": "1.0.1",
     "faucet": "0.0.1",
     "nyc": "6.4.0"
   }
